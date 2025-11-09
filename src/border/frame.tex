@@ -1,0 +1,39 @@
+% Config
+\newlength{\margin}
+\newlength{\frameSpaceA}
+\newlength{\frameSpaceB}
+
+\setlength{\margin}{0.20cm}
+\setlength{\frameSpaceA}{0.055cm}
+\setlength{\frameSpaceB}{0.115cm}
+
+\newlength{\cornerOffsetBase}
+\newlength{\cornerOffsetImage}
+
+\setlength{\cornerOffsetBase}{0.2145pt}
+\setlength{\cornerOffsetImage}{0.02cm}
+
+\definecolor{frameColor}{RGB}{232,118,148}
+
+\backgroundsetup{
+    color=frameColor,
+    scale=1,
+    opacity=1,
+    angle=0,
+    contents={
+        \begin{tikzpicture}
+            % Page Background
+            \fill [fill=white] (current page.south east) rectangle (current
+            page.north west)(current page.north west);
+            % External border
+            \draw[line width=0.75pt] ($ (current page.south east) + (-\margin,\margin) $) rectangle ($ (current page.north west) + (\margin,-\margin) $);
+            \draw[line width=0.4pt] ($ (current page.south east) + (-\margin - \frameSpaceA , \margin + \frameSpaceA ) $) rectangle ($ (current page.north west) + (\margin + \frameSpaceA , -\margin - \frameSpaceA ) $);
+            \draw[line width=1.4pt] ($ (current page.south east) + (-\margin - \frameSpaceB , \margin + \frameSpaceB ) $) rectangle ($ (current page.north west) + (\margin + \frameSpaceB , -\margin - \frameSpaceB ) $);
+            % Corner ornaments
+            \node[anchor=north east, rotate=90] at ( $ (current page.north west) + (\margin,-\margin ) + (-\cornerOffsetImage-\cornerOffsetBase,\cornerOffsetImage+\cornerOffsetBase)$ ){\includegraphics[width=1.5cm]{border/corner.pdf}};
+            \node[anchor=north east, rotate=0] at ( $ (current page.north east) + (-\margin, -\margin) + (\cornerOffsetImage+\cornerOffsetBase,\cornerOffsetImage+\cornerOffsetBase) $ ){\includegraphics[width=1.5cm]{border/corner.pdf}};
+            \node[anchor=north east, rotate=180] at ( $ (current page.south west) + (\margin,\margin) + (-\cornerOffsetImage-\cornerOffsetBase,-\cornerOffsetImage-\cornerOffsetBase) $ ){\includegraphics[width=1.5cm]{border/corner.pdf}};
+            \node[anchor=north east, rotate=270] at ( $ (current page.south east) + (-\margin,\margin) + (\cornerOffsetImage+\cornerOffsetBase, -\cornerOffsetImage-\cornerOffsetBase) $ ){\includegraphics[width=1.5cm]{border/corner.pdf}};
+        \end{tikzpicture}
+        }
+}
