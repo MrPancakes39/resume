@@ -9,6 +9,8 @@
 % Links
 \usepackage{hyperref}
 \hypersetup{hidelinks,pdfborder={0 0 0}} % remove link rectangle
+% Dashed Lines
+\usepackage{dashrule}
 
 % =====[ Formatting ]=====
 
@@ -104,6 +106,59 @@
 \begin{center}
     \textbf{Experience}
 \end{center}
+
+\textbf{MednMind} (Remote) \hfill {November 2023 – Present}
+
+\raisebox{0pt}{\hdashrule[5pt]{\dimexpr\textwidth-0.5cm\relax}{0.8pt}{2pt}}
+
+\textbf{Team Lead}
+
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Assign and prioritize tasks to meet sprint deadlines and ensure ontime delivery.
+    \item Manage sprint planning, backlog grooming, and daily standups to keep work aligned and remove any blockers.
+    \item Review and merge pull requests, enforcing coding standards and release readiness.
+\end{itemize}
+
+\vspace{12pt}
+
+\textbf{Backend Engineer}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Architect and maintain the backend services and ensure they are runnable and correctly configured on Amazon Web Services (AWS) for reliability and scalability.
+    \item Design and implement RESTful APIs using NestJS and TypeScript (compiled with SWC) documenting all endpoints with OpenAPI/Swagger for internal use and End-to-End type safety.
+    \item Designed and implemented the data layer using DrizzleORM with PostgreSQL for type-safe, maintainable database access and Redis for caching and fast state management.
+    \item Implement authentication with BetterAuth following current and latest security recommendations.
+    \item Implement end-to-end subscription management (billing/lifecycle) and associated backend logic.
+    \item Create a Docker-based, production-like local development environment (Postgres, MinIO for S3-compatible storage, ValKey Redis image) to ensure parity with production.
+    \item Design and implement a flexible yet resiliant file-upload handler for S3 compatible storage.
+\end{itemize}
+
+\vspace{12pt}
+
+\textbf{Frontend Engineer}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Created and configured a Vite + React web application for fast dev feedback and optimized builds.
+    \item Implemented a type-safe fetch wrapper that leverages the OpenAPI specification to generate TypeScript types for end-to-end type safety.
+    \item Integrated TanStack Query for server-state management (queries \& mutations) following recommended dev patterns.
+    \item Implemented client-side routing using TanStack Router for full type-safe routing.
+    \item Built the frontend in TypeScript and styled with Tailwind CSS for a consistent, utility-first UI.\@
+\end{itemize}
+
+\vspace{12pt}
+
+\textbf{Mobile Engineer}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Built the mobile application using Expo and React Native with TypeScript.
+    \item Reuses the same technology used in the frontend application (fetch wrapper, tanstack query, tailwind css, etc.) for a good DX and consistent UI/UX across platforms.
+    \item Integrated Expo Updates for over-the-air (OTA) updates to deliver fixes and improvements quickly.
+    \item Implemented push notification handling using Expo Push Notifications for reliable notifications.
+\end{itemize}
+
+\vspace{12pt}
+
+\textbf{Junior Mentor}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Mentored 5 interns in frontend development, accelerating their proficiency in React and Git through structured training, resulting in successful production code contributions.
+\end{itemize}
 
 % ===========================================================================
 
