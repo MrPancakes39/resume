@@ -2,6 +2,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[left=1cm,top=1.5cm,right=1cm,bottom=0.5cm]{geometry}
 
+% Lists
+\usepackage{enumitem}
+% Tables
+\usepackage{tabularx}
+% Links
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}} % remove link rectangle
+
 % =====[ Formatting ]=====
 
 % Fonts
@@ -23,7 +31,38 @@
 \begin{document}
 
 \begin{center}
-    \hrulefill
+    \begin{tabularx}{\linewidth}{
+            >{\raggedright\arraybackslash}X
+            >{\raggedleft\arraybackslash}X
+        }
+        % Column 1
+        \begin{minipage}[t]{\hsize}
+            {\Large { \textbf {Sal Hasan} }}\par
+            {\small{Software Engineer}}
+        \end{minipage}
+         &
+        % Column 2
+        \begin{minipage}[t]{\hsize}
+            \begin{itemize}[label={},leftmargin=0pt,topsep=0pt,itemsep=4pt,parsep=0pt]
+                \item \makebox[\linewidth][r]{
+                          \href{https://www.linkedin.com/in/sal-hasan-00b1b4212/}{
+                              linkedin.com/in/sal-hasan-00b1b4212 \hspace{0.1em}
+                              \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/linkedin.pdf}}
+                          }
+                      }
+                \item \makebox[\linewidth][r]{
+                          \href{https://github.com/MrPancakes39}{
+                              github.com/MrPancakes39 \hspace{0.1em}
+                              \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/github.pdf}}
+                          }
+                      }
+            \end{itemize}
+        \end{minipage}
+    \end{tabularx}
+
+    \vspace{0.2cm}
+
+    \hrulefill{}
 \end{center}
 
 \end{document}
