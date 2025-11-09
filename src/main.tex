@@ -8,7 +8,7 @@
 \usepackage{tabularx}
 % Links
 \usepackage{hyperref}
-\hypersetup{pdfborder={0 0 0}} % remove link rectangle
+\hypersetup{hidelinks,pdfborder={0 0 0}} % remove link rectangle
 
 % =====[ Formatting ]=====
 
@@ -24,6 +24,9 @@
 % Custom Background
 \usepackage{background}
 
+% Colors
+\definecolor{magenta}{HTML}{d83289}
+
 % ========================
 
 \input{border/frame.tex}
@@ -37,24 +40,25 @@
         }
         % Column 1
         \begin{minipage}[t]{\hsize}
-            {\Large { \textbf {Sal Hasan} }}\par
-            {\small{Software Engineer}}
+            {\LARGE{ Sal Hasan }}\par
+            \vspace{0.04cm}
+            {\textcolor{magenta}{Software Engineer}}
         \end{minipage}
          &
         % Column 2
         \begin{minipage}[t]{\hsize}
-            \begin{itemize}[label={},leftmargin=0pt,topsep=0pt,itemsep=4pt,parsep=0pt]
+            \begin{itemize}[label={},leftmargin=0pt,topsep=0pt,itemsep=2pt,parsep=0pt]
                 \item \makebox[\linewidth][r]{
-                          \href{https://www.linkedin.com/in/sal-hasan-00b1b4212/}{
-                              linkedin.com/in/sal-hasan-00b1b4212 \hspace{0.1em}
-                              \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/linkedin.icon.pdf}}
-                          }
+                          \footnotesize{\href{https://www.linkedin.com/in/sal-hasan-00b1b4212/}{
+                                  linkedin.com/in/sal-hasan-00b1b4212 \hspace{0.1em}
+                                  \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/linkedin.icon.pdf}}
+                              }}
                       }
                 \item \makebox[\linewidth][r]{
-                          \href{https://github.com/MrPancakes39}{
-                              github.com/MrPancakes39 \hspace{0.1em}
-                              \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/github.icon.pdf}}
-                          }
+                          \footnotesize{\href{https://github.com/MrPancakes39}{
+                                  github.com/MrPancakes39 \hspace{0.1em}
+                                  \raisebox{-0.12\height}{\includegraphics[height=1.0em]{icons/github.icon.pdf}}
+                              }}
                       }
             \end{itemize}
         \end{minipage}
